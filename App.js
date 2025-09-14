@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function App() {
   return (
@@ -23,6 +24,23 @@ export default function App() {
       />
       <Text style={{ fontSize: 30, fontWeight: "bold" }}>Greg Delgado</Text>
       <Text>Senior Software Engineer</Text>
+      <View style={{ flexDirection: "row", marginVertical: 10, gap: 10 }}>
+        <FontAwesome6
+          name="github"
+          size={24}
+          color="black"
+        />
+        <FontAwesome6
+          name="x-twitter"
+          size={24}
+          color="black"
+        />
+        <FontAwesome6
+          name="at"
+          size={24}
+          color="black"
+        />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
