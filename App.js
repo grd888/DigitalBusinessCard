@@ -1,8 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Button, Linking } from "react-native";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function App() {
+  const contactMe = () => {
+		Linking.openURL("mailto:vadim@notjust.dev");
+	};
+
   return (
     <ScrollView>
     <View style={styles.container}>
@@ -65,6 +69,7 @@ export default function App() {
         Malesuada pellentesque elit eget gravida. Vitae nunc sed velit dignissim
         sodales ut eu sem integer.
       </Text>
+      <Button title="Contact me" onPress={contactMe} />
       <StatusBar style="auto" />
     </View>
     </ScrollView>
